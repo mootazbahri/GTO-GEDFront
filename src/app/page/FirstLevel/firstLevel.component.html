@@ -1,0 +1,38 @@
+﻿<section class="our-webcoderskull padding-lg">
+    <div class="container">
+        <div class="card-deck" *ngIf="levelType == 'T'">
+            <div *ngFor="let year of documentYears">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-center">
+                        <img src="../../../assets/FolderIcon.png" class="rounded" width="100px" height="100px" />
+                    </div>
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">{{year.year}}</h5>
+                        <p class="card-text">Liste des documents triés enregistrés en {{year.year}}.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-info"
+                            (click)="openYearFolder(year.year)">Ouvrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck" *ngIf="levelType == 'NT'">
+            <div *ngFor="let year of documentYearsNotSorted">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-center">
+                        <img src="../../../assets/FolderIcon.png" class="rounded" width="100px" height="100px" />
+                    </div>
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">{{year.year}}</h5>
+                        <p class="card-text">Liste des documents pas encore triés enregistrés en {{year.year}}.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-info"
+                            (click)="openYearFolder(year.year)">Ouvrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

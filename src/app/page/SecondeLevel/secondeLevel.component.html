@@ -1,0 +1,24 @@
+﻿<section class="our-webcoderskull padding-lg">
+    <div class="container">
+        <div class="card-deck mb-4">
+            <div *ngFor="let month of DocumentMonths">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-center">
+                        <img src="../../../assets/FolderIcon.png" class="rounded" width="100px" height="100px" />
+                    </div>
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">{{monthNames[month.month - 1]}}</h5>
+                        <p class="card-text" *ngIf="accueil == 'T'">Liste des documents triés enregistrés à
+                            {{monthNames[month.month - 1]}} {{levelType}}.</p>
+                        <p class="card-text" *ngIf="accueil == 'NT'">Liste des documents pas encore triés enregistrés à
+                            {{monthNames[month.month - 1]}} {{levelType}}.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-info" *ngIf="accueil == 'T'" (click)="openTypesPerMonth(month.month)">Ouvrire</button>
+                        <button type="button" class="btn btn-info" *ngIf="accueil == 'NT'" (click)="openIdFolders(month.month)">Ouvrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

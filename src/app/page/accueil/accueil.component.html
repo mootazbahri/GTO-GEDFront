@@ -1,0 +1,30 @@
+﻿<section *ngIf="level0" class="our-webcoderskull padding-lg">
+    <div class="container">
+        <div class="card-deck">
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center">
+                    <img src="../../../assets/FolderIcon.png" class="rounded" width="100px" height="100px" />
+                </div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Document Trié</h5>
+                    <p class="card-text">Liste des documents trié.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-info" (click)="openDocs('T')">Ouvrire</button>
+                </div>
+            </div>
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center">
+                    <img src="../../../assets/FolderIcon.png" class="rounded" width="100px" height="100px" />
+                </div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Document pas encore Trié</h5>
+                    <p class="card-text">La liste des documents par encore trié.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-info" (click)="openDocs('NT')">Ouvrire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

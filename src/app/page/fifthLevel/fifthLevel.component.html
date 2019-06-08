@@ -1,0 +1,21 @@
+﻿<section class="our-webcoderskull padding-lg">
+        <div class="container">
+            <div class="card-deck mb-4" *ngIf="level == 'T'">
+                    <div>
+                        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                            <div class="card-header text-center">
+                                <img src="../../../assets/FileIcon.jpg" class="rounded" width="100px" height="100px" />
+                            </div>
+                            <div class="card-body text-secondary">
+                                <h5 class="card-title">{{ fileName }}</h5>
+                                <p class="card-text">Document triés enregistrés en
+                                    {{monthNames[levelMonth - 1]}} {{levelYear}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-info" (click)="openDisplayFile()">Ouvrire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>

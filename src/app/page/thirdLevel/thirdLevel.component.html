@@ -1,0 +1,38 @@
+﻿<section class="our-webcoderskull padding-lg">
+    <div class="container">
+        <div class="card-deck mb-4" *ngIf="level == 'T'">
+            <div *ngFor="let typeDocument of DocTypeNames">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-center">
+                        <img src="../../../assets/FolderIcon.png" class="rounded" width="100px" height="100px" />
+                    </div>
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">{{ typeDocument }}</h5>
+                        <p class="card-text">Liste des documents triés enregistrés en
+                            {{monthNames[levelMonth - 1]}} {{levelYear}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-info" (click)="openTypeFolder(typeDocument)">Ouvrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck mb-4" *ngIf="level == 'NT'">
+            <div *ngFor="let idFolder of folderNumbers">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-center">
+                        <img src="../../../assets/FolderIcon.png" class="rounded" width="100px" height="100px" />
+                    </div>
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">{{ idFolder }}</h5>
+                        <p class="card-text">Contient une document pas encore triés enregistrés en
+                            {{monthNames[levelMonth - 1]}} {{levelYear}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-info" (click)="openIdFolder(idFolder)">Ouvrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
